@@ -37,3 +37,11 @@ npm run dev
  | - index.html             Initial page
 ```
 
+### Next steps
+
+- Component Users: users.service.js should avoid duplicated requests (It should store previous success responses)   
+- Component Users: users-grid & user-repos sub components could use a card component
+- Error handling for HTTP 400 & 500 ranges: Implement an HTTP Request interceptor
+- UI/UX design
+- Virtual scrolling to improve rendering & scripting
+- Create a dist task in webpack to extract the minimized build for production
