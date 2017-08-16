@@ -1,0 +1,45 @@
+<section class="users">
+
+    <div class="row cards-container">
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-left"
+         ng-repeat="user in $ctrl.users track by $index">
+
+            <div class="card p-3">
+
+                <img class="card-img-top"
+                     ng-src="{{:: user.avatar_url}}"
+                     alt="{{:: user.login}} avatar picture">
+
+                <div class="card-block">
+
+                    <p class="card-text">
+                        <h4 class="card-title">
+                            {{:: user.login}}
+                        </h4>
+                    </p>
+
+                    <div class="card-block">
+                        <a class="card-link"
+                           ui-sref="details"
+                           href="#"
+                           target="_blank">
+                            Repos
+                        </a>
+
+                        <a class="card-link"
+                           ng-href="{{:: user.html_url}}"
+                           target="_blank">
+                            Github
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
