@@ -7,12 +7,16 @@ function UsersService(Restangular) {
     return data.plain();
   }
 
-  service.getOne = function(id, params) {
-    return service.one(id).get(params).then(plainResponse);
+  service.getOne = function(id) {
+    return service.one(id).get().then(plainResponse);
   };
 
   service.getAll = function(since) {
     return service.getList(since ? { since: since } : '').then(plainResponse);
+  };
+
+  service.getAllRepos = function(id) {
+    return service.one(id).customGET('repos', {}).then(plainResponse);
   };
 
   return service;

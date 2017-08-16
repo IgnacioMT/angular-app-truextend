@@ -1,8 +1,8 @@
-require('./users.less');
+const UsersModule = angular.module('angular-app-truextend.components.users', [
+  require('./user-repos/user-repos.module').name,
+  require('./users-grid/users-grid.module').name
+]);
 
-const UsersModule = angular.module('angular-app-truextend.components.users', []);
-
-UsersModule.component('users', require('./users.component'));
 UsersModule.factory('UsersService', require('./users.service'));
 
 module.exports = UsersModule;

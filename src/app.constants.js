@@ -1,7 +1,7 @@
 const constants = {
 
   DEVELOPMENT: {
-    REST_API_BASE_URL: 'http://localhost:8080/api/v1/',
+    REST_API_BASE_URL: 'https://api.github.com/',
     DEFAULT_INITIAL_ROUTE: '/home'
   },
 

@@ -1,4 +1,4 @@
-<section class="users">
+<section class="users-grid">
 
     <div class="row cards-container">
 
@@ -21,16 +21,14 @@
 
                     <div class="card-block">
                         <a class="card-link"
-                           ui-sref="details"
-                           href="#"
-                           target="_blank">
+                           ui-sref="profile({id: user.login})">
                             Repos
                         </a>
 
                         <a class="card-link"
                            ng-href="{{:: user.html_url}}"
                            target="_blank">
-                            Github
+                            GitHub
                         </a>
                     </div>
 

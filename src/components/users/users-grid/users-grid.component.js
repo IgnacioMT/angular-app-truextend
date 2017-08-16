@@ -1,17 +1,17 @@
 const component = {
-  template: require('./users.html'),
-  controller: UsersController,
+  template: require('./users-grid.html'),
+  controller: UsersGridController,
   bindings: { }
 };
 
-UsersController.$inject = [
+UsersGridController.$inject = [
   '$log',
   'UsersService'
 ];
 
-function UsersController($log, UsersService) {
+function UsersGridController($log, UsersService) {
   const ctrl = this;
-  ctrl.name = 'Users';
+  ctrl.name = 'UsersGrid';
   $log.info('Init: Component - ' + ctrl.name);
 
   ctrl.users = [];
