@@ -26,6 +26,14 @@ function UsersGridController($log, UsersService) {
     $log.log('Oops something went wrong');
   }
 
+  ctrl.loadMore = function() {
+    UsersService.getAll(ctrl.users[ctrl.users.length - 1].id).then(onLoadMoreSuccess, onError);
+  };
+
+  function onLoadMoreSuccess(data) {
+    ctrl.users = ctrl.users.concat(data);
+  }
+
 }
 
 module.exports = component;

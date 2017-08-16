@@ -16,10 +16,12 @@ function UserReposController($log, UsersService) {
   ctrl.name = 'UserRepos';
   $log.info('Init: Component - ' + ctrl.name);
 
+  ctrl.repos = [];
+
   UsersService.getAllRepos(ctrl.id).then(onSuccess, onError);
 
   function onSuccess(data) {
-    $log.log(data);
+    ctrl.repos = data;
   }
 
   function onError() {
